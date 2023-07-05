@@ -21,14 +21,7 @@ author: GigaScience Press
 
 navbar-links:
   About: "pages/about"
-  Standards: 
-    - Standards: "/pages/standards-intro"
-    - Checklists: "/pages/standards/checklists"
-    - Extensions: "/pages/standards/extensions"
-    - Implementation: "/pages/standards/implementation"
-  Meetings: "pages/meetings"
-  Notices: "pages/blog"
-  Projects: "pages/projects"
+  Pages: "pages/blog"
   Contact: "pages/contact"
 
 ################
