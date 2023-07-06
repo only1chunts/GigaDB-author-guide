@@ -21,7 +21,7 @@ author: GigaScience Press
 
 navbar-links:
   About: "pages/about"
-  Pages: "pages/blog"
+  Pages: "blog"
   Contact: "pages/contact"
 
 ################
