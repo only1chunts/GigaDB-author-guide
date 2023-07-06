@@ -1,0 +1,115 @@
+---
+layout: post
+title: MD5 hash value calculations
+tags: [md5, hash, hashsum, fidelity]
+comments: true
+---
+
+This page will describe how to calculate the MD5sum values of all files in a particular directory and save them in the expected ingestion format. Each operating system has different ways to do this.
+
+# Expected format of MD5 file
+The MD5 hash sum values need to be provided to GigaDB in the correct format to enable our scripts to check them against the files submitted. MD5 hash values provided in any other format will require manual checking which will delay the processing.
+
+The expected format is a simple Tab-separated value (TSV) text file, with the columns [Hash value]	[File name]
+
+The filenames should include the relative location (i.e. any subdirectory names) of each file but not the full absolute path on your local machine, as the absolute path will change when the files are uploaded to our server.
+
+
+# Linux
+These instructions are for a linux operating system.
+
+The native app called "md5sum" is capable of providing the hash values of multiple files in the same location simply using the wildcard * as the input value. However to make it look recursively within subdirectories requires the use of other system commands or a script. 
+
+The simplest way to create the required format md5 hash list is using this command:
+
+$  find ./ -type f -exec md5sum {} \;> md5-list.tsv
+
+"find" is a shell command that will search the given directory "./" for files "-type f", find works recursively by default so will find all files in the currently directory or sub-directories there-of.
+
+"-exec" passes the results of the "find" command into the "md5sum" tool individually "{}", then appends a line return "\;" before directing the output ">" to the file called "md5-list.tsv"
+
+
+# Mac
+These instructions are for MacOS.
+
+Open a terminal and use the following command to generate a checksum list:
+
+find ./ -type f -exec md5 {} \;> md5-list.tsv
+
+To view the list use the cat command:
+
+cat md5-list.tsv
+
+A screen capture is below.
+
+
+On the terminal use the awk command to create a re-ordered list:
+
+awk '{ print $4 " " $2}' md5-list.tsv > md5-list-new.tsv
+
+An example re-ordered list is below:
+
+be4c64b07ff8fa590c6a3eb71e4ef751 (.//.DS_Store)
+
+2dc6bf3d35d44a67f3bc8a60a3e7d3b2 (.//figure1.PNG)
+
+b7edad33461ce2dcbc16c7a563929cab (.//figure2.PNG)
+
+2ec82a3d6df8a2f1cedecddcdfc72be0 (.//figure3.PNG)
+
+39793331e2e28f815297c299168069a7 (.//GIGAScience_v25_wTrackChanges.docx)
+
+d14a152587972f73296a355ac34d06d8 (.//GIGAScience_v26_final.docx)
+
+8a8b05c3c804e5182d8c53593add31c6 (.//md5-list-new.tsv)
+
+0df2b00517119c9cd46d9aa1ac95d10e (.//md5-list.tsv)
+
+8cb17690660660f8f60a83dbe01a8a7a (.//tmp/image_01.png)
+
+437af504762212fd8a975a0db937d60d (.//tmp/image_02.png)
+
+
+Use a text editor to replace the extra characters
+
+
+
+# Windows
+These instructions are for a 64bit Windows 10+ operating system.
+
+Individual files can be calculated with a variety of different tools/apps. But there are very few apps that can calculate the md5 hash of multiple files and save those in the format we require for ingestion into GigaDB. One such app "Hash Tool" is available for free from the Microsoft Store:
+
+
+To use Windows Hash Tool:
+1 - Install from the Microsoft Store
+
+2 - Open Hash Tool app
+
+3 - Goto the "Options" dropdown and select the "Output Format" as "Hash (Tab) Filename":
+
+
+4 - Select the relevant directory as the "Input File(s)":
+
+
+5 - As soon as you click "Open" the App starts to calculate the MD5 hash values of the files selected and displays those values in the results window:
+
+
+6 - Repeat the select and open steps for all relevant subdirectories. (You can only select files from a single directory, but you can repeat the process for additional subdirectories and the results are appended to the list already created)
+
+7 - Save the results as a file
+
+
+Unfortunately, the filenames are saved as absolute path rather than relative path, which will cause problems for the automated checked scripts we use.
+
+The MD5 list file saved from HashTool will look like this:
+
+
+It needs to look like this instead:
+
+
+You can adjust the file using the find and replace function in any text editor to remove the common path at the start of the file names, but be sure to save the file as plain text (NOT doc, docx or rtf).
+
+Another possible tool to use on Windows is "HashMyFile" https://hashmyfiles.soft112.com/ and there are others, all tools should give the same md5 hash value for any given file so it does not which tool you use as long as the output is saved in the required format of TSV.
+
+
+Note to self- Windows is awkward because it uses a directory delimiter of "\" instead of "/" as used by linux and mac, we need to come up with a suitable method to work with this.
