@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About GS
-cover-img: ../assets/img/GigaSciencePress-v1.0-Color.png
+cover-img: ../assets/img/GigaSciencePress-v1.0-Color.svg
 share-img: ../assets/img/GigaSciencePress-v1.0-Color.svg
 ---
 
@@ -16,7 +16,7 @@ GigaScience Press has the goal of achieving true open science by embracing the U
 
 
 ## About GigaByte Journal
-![Gigabyte logo](../assets/img/GIGA byte 0704 cs6-03.png)
+![Gigabyte logo](../assets/img/GIGA-byte-0704-cs6-03.png)
 <i>(GigaByte)[https://gigabytejournal.com/]</i> aims to promote the most rapid exchange of scientific information in a formal peer-reviewed publishing platform. Modern research is data-driven, iterative, and aims to be FAIR: Findable, Accessible, Interoperable and Reusable. It is also fast moving, with available data and computational tools changing constantly and swiftly evolving fields continuously being tested, updated and modified by the community. GigaByte provides scientists a venue to rapidly and easily share and build upon each other’s research outputs publishing short, focused, data-driven articles using a publishing platform that allows nearly immediate online publication on acceptance.
 
 
