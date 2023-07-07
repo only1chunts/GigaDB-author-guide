@@ -1,18 +1,17 @@
 ---
 layout: post
 title: DCN Primer on How to Manage Data
-cover-img: images/DCNlogo.png
-thumbnail-img: images/DCNlogo.png
-share-img: images/DCNlogo.png
+cover-img: /assets/img/DCNlogo.jpg
+share-img: /assets/img/DCNlogo.png
 tags: [Data Curation Network, FAIR, CARE]
 comments: true
 ---
 The Data Curation Network have prepared an excellent primer on how to manage research data, so instead of rehashing it specifically for GigaDB, here is the full article reproduced directly from the DCN, please refer to the [DCN GitHub repository](https://github.com/DataCurationNetwork/data-primers) for any updates or additions since we copied it here 07-July-2023, and note the CC-BY attribution of this work.
 
-![DCN logo-PNG](images/DCNlogo.png)
+![DCN logo-PNG](/assets/img/DCNlogo.png)
 
 
-![DCN logo-JPEG](images/DCNlogo.jpg)
+![DCN logo-JPEG](/assets/img/DCNlogo.jpg)
 
 
 # Primer for Researchers on How to Manage Data
