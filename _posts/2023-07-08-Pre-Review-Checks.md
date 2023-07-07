@@ -2,9 +2,9 @@
 layout: post
 title: Pre-review checks
 subtitle: Before peer-review the data needs to be available somewhere, this guide explains the checks carried out by GigaScience Press staff prior to send the manuscript to peer-review
-cover-img: /assets/img/
-share-img: /assets/img/
-tags: [, test]
+cover-img: /assets/img/checklist-banner.jpg
+share-img: /assets/img/checklist-banner.jpg
+tags: [curation, checklist]
 ---
 
 ## The current manuscript workflow
