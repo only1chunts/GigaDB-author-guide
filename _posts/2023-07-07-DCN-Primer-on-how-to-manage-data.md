@@ -1,7 +1,8 @@
 ---
 layout: post
-title: DCN Primer for Researchers on How to Manage Data
-tags:[Data Curation Network, FAIR, CARE]
+title: DCN Primer on How to Manage Data
+tags: [Data Curation Network, FAIR, CARE]
+comments: true
 ---
 
 ![](DCNlogo.png)
