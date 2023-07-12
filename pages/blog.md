@@ -10,7 +10,7 @@ This page will auto update when new items are added. <!-- to "_posts" folder, I 
 
 
 ## To find relevant pages use the Search tool by clicking the magnifying glass icon in the top right of this page.
-
+{% include search.html %}
 
 <ui>
   {% for post in site.posts %}
