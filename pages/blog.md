@@ -10,12 +10,9 @@ This page will auto update when new pages are added.
 ## To find relevant pages use the Search tool by clicking the magnifying glass icon in the top right of this page.
 
 {% if site.post_search %}
-          <a class="nav-link" id="nav-search-link" href="#" title="Search">
-            <span id="nav-search-icon" class="fa fa-search"></span>
-            <span id="nav-search-text">Search</span>
-          </a>
-      {%- endif -%}
 {% include search.html %}
+{%- endif -%}
+
 
 <ui>
   {% for post in site.posts %}
