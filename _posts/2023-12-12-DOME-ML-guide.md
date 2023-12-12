@@ -10,8 +10,8 @@ comments: true
 
 # Guide to DOME-ML wizard
 
-![Step1](DOME_Wizard_Step_01.png)
+![Step1](/assets/img/dome-steps/DOME_Wizard_Step_01.png)
 
-![Step2](DOME_Wizard_Step_02.png)
+![Step2](/assets/img/dome-steps/DOME_Wizard_Step_02.png)
 
-![Step3](DOME_Wizard_Step_03.png)
+![Step3](/assets/img/dome-steps/DOME_Wizard_Step_03.png)
