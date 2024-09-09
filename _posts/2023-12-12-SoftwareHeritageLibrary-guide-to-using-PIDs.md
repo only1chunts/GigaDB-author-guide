@@ -30,6 +30,10 @@ https://archive.softwareheritage.org/browse/origin/directory/?origin_url=https:/
 10. Then click the copy permalink button , e.g. copy 
 https://archive.softwareheritage.org/swh:1:snp:dcf6d006361fca8e099de2ab7f5c9d5033d867af;origin=https://github.com/gigascience/gigadb-website
 OR you can remove the last part of the URL after the ; as that is just human readable metadata and not required as part of the PID.
+11. you can create a full data citation string using that URL combined with the authors (repository owners, or associated publication authors if there is one), following the standard reference guidelines of the relevant journal or publisher, e.g. for a GigaScience reference this would look something like:
+SSoftware with persistent identifier (Software Heritage)
+Fang S, Cao L, Yang C, Hu L et al. (2023) SGAE: Deciphering spatial domains from spatially resolved transcriptomics with Siamese Graph Autoencoder (Version 1). [Computer software]. Software Heritage, https://archive.softwareheritage.org/swh:1:snp:19c3ac3c492b5b4c6aca5451eeea9efb52a3ad9d;origin=https://github.com/STOmics/SGAE
+
 
 Additionally, they offer a Widget iframe view, which we should be able to include in GigaDB or in GigaByte. 
 
