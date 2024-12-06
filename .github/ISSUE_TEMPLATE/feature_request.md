@@ -4,7 +4,7 @@ about: Suggest an idea for this project
 title: ''
 labels: ''
 assignees: ''
-
+projects: 'test-project'
 ---
 
 **Is your feature request related to a problem? Please describe.**
