@@ -70,6 +70,12 @@ body:
           required: true
         - label: Funding details are formated correctly with no additional commas or semi-colons
           required: true
+        - label: Add your own name as the assignee (top-right)
+          required: true
+        - label: Add the Label in-curation to the ticket
+          required: true
+        - label: Add to the project 'Dataset-Prep-tracking project'
+          required: true
   - type: textarea
     id: spreadsheet
     attributes:
