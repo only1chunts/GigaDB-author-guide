@@ -1,4 +1,4 @@
-name: New prepare-dataset curation
+name: yml New prepare-dataset curation
 description: When a new MS is added to the prepare dataset list
 title: "<Include MS Submission ID, Dataset DOI number, userbox, name/ID, curator name in title>"
 labels: 
