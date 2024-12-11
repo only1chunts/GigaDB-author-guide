@@ -42,7 +42,7 @@ body:
     validations:
       required: false      
   - type: dropdown
-    id: handling editor
+    id: handling-editor
     attributes:
       label: Handling Editor
       description: Select the name of the Handling editor
