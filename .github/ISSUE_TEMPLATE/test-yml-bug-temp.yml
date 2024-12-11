@@ -12,7 +12,7 @@ body:
     id: checklist
     attributes:
       label: Checklist
-      description: Please complete the boxes to confirm each of the checklist items have been done, you can add additional comments here:
+      description: Please complete the boxes to confirm each of the checklist items have been done, you can add additional comments here
       placeholder: ex. any additional infor provided by Eds at handover
     validations:
       required: false
@@ -21,7 +21,7 @@ body:
     attributes:
       label: MS Submission ID
       description: Add the manuscript submission ID here
-      placeholder: [GIGA-D-25-00123]
+      placeholder: GIGA-D-25-00123
     validations:
       required: true
   - type: input
@@ -42,7 +42,7 @@ body:
     validations:
       required: false      
   - type: dropdown
-    id: handling editor
+    id: handling-editor
     attributes:
       label: Handling Editor
       description: Select the name of the Handling editor
@@ -60,15 +60,15 @@ body:
   - type: input
     id: dropbox-id
     attributes:
-      label: user-dropbox name & password
-      description: Provide the user-dropbox name & password.
+      label: user-dropbox name and password
+      description: Provide the user-dropbox name and password.
       placeholder: eg. userNNN:abc123def
     validations:
       required: true
   - type: checkboxes
     id: pre-filled-spreadsheet-checks
     attributes:
-      label: Please check the boxes to confirm each of the following items have been checked on the pre-filled spreadsheet:
+      label: Please check the boxes to confirm each of the following items have been checked on the pre-filled spreadsheet
       options:
         - label: Checked if user email address is already in GigaDB
           required: true
@@ -82,7 +82,6 @@ body:
     id: spreadsheet
     attributes:
       label: pre-filled Spreadsheet
-      description: Please copy and paste any relevant log output. 
-        Tip: You can attach files by clicking this area to highlight it and then dragging files into it.
+      description: Please copy and paste any relevant log output. Tip You can attach files by clicking this area to highlight it and then dragging files into it.
     validations:  
       required: true
