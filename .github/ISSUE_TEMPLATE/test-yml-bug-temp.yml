@@ -1,64 +1,88 @@
 name: Bug Report
 description: File a bug report.
-title: "[Bug]: "
-labels: ["bug", "triage"]
-projects: ["octo-org/1", "octo-org/44"]
-assignees:
-  - octocat
+title: "[Include MS Submission ID, Dataset DOI number, userbox]"
+labels: ["datasetPrep"]
+projects: ["gigascience/87"]
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this bug report!
-  - type: input
-    id: contact
+        Fill out the form with the manuscript and dataset info!
+  - type: textarea
+    id: checklist
     attributes:
-      label: Contact Details
-      description: How can we get in touch with you if we need more info?
-      placeholder: ex. email@example.com
+      label: Checklist
+      description: Please complete the boxes to confirm each of the checklist items have been done, you can add additional comments here:
+      placeholder: ex. any additional infor provided by Eds at handover
     validations:
       required: false
-  - type: textarea
-    id: what-happened
+  - type: input
+    id: ms-sub-id
     attributes:
-      label: What happened?
-      description: Also tell us, what did you expect to happen?
-      placeholder: Tell us what you see!
-      value: "A bug happened!"
+      label: MS Submission ID
+      description: Add the manuscript submission ID here
+      placeholder: [GIGA-D-25-00123]
     validations:
       required: true
-  - type: dropdown
-    id: version
+  - type: input
+    id: ms-title
     attributes:
-      label: Version
-      description: What version of our software are you running?
+      label: MS title
+      description: Add the manuscript title here
+      placeholder: 
+      value: "Supporting data for "
+    validations:
+      required: true
+  - type: textarea
+    id: ms-author
+    attributes:
+      label: MS Author
+      description: Add the manuscript contact author(s) here, you can include name, email and orcid.
+      placeholder: 
+    validations:
+      required: false      
+  - type: dropdown
+    id: handling editor
+    attributes:
+      label: Handling Editor
+      description: Select the name of the Handling editor
       options:
-        - 1.0.2 (Default)
-        - 1.0.3 (Edge)
+        - unknown (Default)
+        - Scott
+        - Nicole
+        - Hans
+        - Hongling
+        - Hongfang
+        - Qing
       default: 0
     validations:
       required: true
-  - type: dropdown
-    id: browsers
+  - type: input
+    id: dropbox-id
     attributes:
-      label: What browsers are you seeing the problem on?
-      multiple: true
-      options:
-        - Firefox
-        - Chrome
-        - Safari
-        - Microsoft Edge
-  - type: textarea
-    id: logs
-    attributes:
-      label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
-      render: shell
+      label: user-dropbox name & password
+      description: Provide the user-dropbox name & password.
+      placeholder: eg. userNNN:abc123def
+    validations:
+      required: true
   - type: checkboxes
-    id: terms
+    id: pre-filled-spreadsheet-checks
     attributes:
-      label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com). 
+      label: Please check the boxes to confirm each of the following items have been checked on the pre-filled spreadsheet:
       options:
-        - label: I agree to follow this project's Code of Conduct
+        - label: Checked if user email address is already in GigaDB
           required: true
+        - label: Dataset type(s) are spelt correctly 
+          required: true
+        - label: Author list format is as expected
+          required: true
+        - label: Funding details are formated correctly with no additional commas or semi-colons
+          required: true
+  - type: textarea
+    id: spreadsheet
+    attributes:
+      label: pre-filled Spreadsheet
+      description: Please copy and paste any relevant log output. 
+        Tip: You can attach files by clicking this area to highlight it and then dragging files into it.
+    validations:  
+      required: true
