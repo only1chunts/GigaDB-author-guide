@@ -12,7 +12,7 @@ body:
     id: checklist
     attributes:
       label: Checklist
-      description: Please complete the boxes to confirm each of the checklist items have been done, you can add additional comments here:
+      description: Please complete the boxes to confirm each of the checklist items have been done, you can add additional comments here
       placeholder: ex. any additional infor provided by Eds at handover
     validations:
       required: false
