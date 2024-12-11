@@ -9,6 +9,14 @@ body:
       value: |
         Fill out the form with the manuscript and dataset info!
   - type: input
+    id: dataset-doi
+    attributes:
+      label: Dataset DOI
+      description: Add the next available dataset DOI number here
+      placeholder: 123456
+    validations:
+      required: true
+  - type: input
     id: ms-sub-id
     attributes:
       label: MS Submission ID
