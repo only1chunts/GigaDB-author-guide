@@ -13,7 +13,7 @@ body:
     attributes:
       label: Dataset DOI
       description: Add the next available dataset DOI number here
-      placeholder: 123456
+      placeholder: eg. 123456
     validations:
       required: true
   - type: input
