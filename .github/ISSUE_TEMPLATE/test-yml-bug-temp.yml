@@ -60,8 +60,8 @@ body:
   - type: input
     id: dropbox-id
     attributes:
-      label: user-dropbox name and password
-      description: Provide the user-dropbox name and password.
+      label: user-dropbox details
+      description: Provide the user-dropbox name and login details.
       placeholder: eg. userNNN:abc123def
     validations:
       required: true
