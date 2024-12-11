@@ -68,7 +68,7 @@ body:
   - type: checkboxes
     id: pre-filled-spreadsheet-checks
     attributes:
-      label: Please check the boxes to confirm each of the following items have been checked on the pre-filled spreadsheet:
+      label: Please check the boxes to confirm each of the following items have been checked on the pre-filled spreadsheet
       options:
         - label: Checked if user email address is already in GigaDB
           required: true
