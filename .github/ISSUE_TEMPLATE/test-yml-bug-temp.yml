@@ -8,14 +8,6 @@ body:
     attributes:
       value: |
         Fill out the form with the manuscript and dataset info!
-  - type: textarea
-    id: checklist
-    attributes:
-      label: Checklist
-      description: Please complete the boxes to confirm each of the checklist items have been done, you can add additional comments here
-      placeholder: ex. any additional infor provided by Eds at handover
-    validations:
-      required: false
   - type: input
     id: ms-sub-id
     attributes:
@@ -85,3 +77,11 @@ body:
       description: Please upload the pre-filled spreadsheet here. You can attach files by clicking this area to highlight it and then dragging files into it.
     validations:  
       required: true
+  - type: textarea
+    id: comments
+    attributes:
+      label: comments
+      description: You can add additional comments here
+      placeholder: ex. any additional infor provided by Eds at handover
+    validations:
+      required: false
