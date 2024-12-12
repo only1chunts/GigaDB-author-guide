@@ -54,6 +54,7 @@ body:
         - Hongling
         - Hongfang
         - Qing
+      default: unknown  
     validations:
       required: true
   - type: input
