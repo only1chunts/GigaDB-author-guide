@@ -1,5 +1,5 @@
 name: Test-yml dataset Prep-tracking
-description: first attempt at using a yml format to create a issue template
+description: first attempt at using a yml format to create a issue template. MS has passed peer-review, use this form to request curators create the GigaDB dataset to accompany it.
 title: "[Include MS Submission ID, Dataset DOI number, userbox]"
 labels: ["datasetPrep"]
 projects: ["gigascience/87"]
@@ -24,11 +24,22 @@ body:
       placeholder: GIGA-D-25-00123
     validations:
       required: true
-  - type: input
-    id: ms-title
+  - type: dropdown
+    id: journal
     attributes:
-      label: MS title
-      description: Add the manuscript title here
+      label: Which journal
+      description: Select the journal
+      options:
+        - GigaScience (Default)
+        - GigaByte
+        - other/unknown
+    validations:
+      required: true
+  - type: input
+    id: dataset-title
+    attributes:
+      label: Dataset title
+      description: Complete the expected dataset title. Note. Usually this is the manuscript title prefixed with Supporting data for.
       placeholder: 
       value: "Supporting data for "
     validations:
@@ -54,41 +65,28 @@ body:
         - Hongling
         - Hongfang
         - Qing
-      default: 0  
     validations:
       required: true
   - type: input
     id: dropbox-id
     attributes:
       label: user-dropbox details
-      description: Provide the user-dropbox name and login details.
-      placeholder: eg. userNNN:abc123def
+      description: Provide the user-dropbox name and login details, or enter 'no dropbox required'.
+      placeholder: eg. userNNN:abc123def or no dropbox required
     validations:
       required: true
   - type: checkboxes
-    id: pre-filled-spreadsheet-checks
+    id: is-it-ready-to-start-checks
     attributes:
-      label: Please check the boxes to confirm each of the following items have been checked on the pre-filled spreadsheet
+      label: Please check the boxes to confirm each of the following items have been checked prior to submitting this ticket
       options:
-        - label: Checked if user email address is already in GigaDB
-          required: true
-        - label: Dataset type(s) are spelt correctly 
-          required: true
-        - label: Author list format is as expected
-          required: true
-        - label: Funding details are formated correctly with no additional commas or semi-colons
-          required: true
-        - label: Add your own name as the assignee (top-right)
-          required: true
-        - label: Add the Label in-curation to the ticket
-          required: true
-        - label: Add to the project 'Dataset-Prep-tracking project'
+        - label: Add the handling curators name as the assignee (top-right)
           required: true
   - type: textarea
     id: spreadsheet
     attributes:
       label: pre-filled Spreadsheet
-      description: Please upload the pre-filled spreadsheet here. You can attach files by clicking this area to highlight it and then dragging files into it.
+      description: Please upload the part-filled spreadsheet and the thumbnail image here. You can attach files by clicking this area to highlight it and then dragging files into it.
     validations:  
       required: true
   - type: textarea
@@ -99,3 +97,32 @@ body:
       placeholder: ex. any additional infor provided by Eds at handover
     validations:
       required: false
+  - type: checkboxes
+    id: completed-spreadsheet-checklist
+    attributes:
+      label: After the spreadsheet has been completed, use this checklist to avoid issues when using the dataset upload scripts
+      options:
+        - label: Checked if user email address is already in GigaDB
+          required: false
+        - label: Dataset type(s) are spelt correctly 
+          required: false
+        - label: Author list format is as expected
+          required: false
+        - label: Funding details are formated correctly with no additional commas or semi-colons
+          required: false
+        - label: Sample tab includes ONLY 1 header row (plus sample rows) 
+          required: false
+        - label: Sample attributes are from the controlled vocabulary present in GigaDB attributes table
+          required: false
+        - label: All filenames ONLY include the characters a-z A-Z 0-9 _ - + .  nothing else
+          required: false
+        - label: File list exactly matches the files in the relevant userbox, NB. readme_DOI.txt will be in files tab of spreadsheet but not in userbox, DOI.md5 and DOI.filesizes will appear in userbox but not in files tab of spreadsheet
+          required: false
+        - label: There are no hidden/system files included in userbox (nor spreadsheet), e.g `.DS_store` or similar.
+          required: false
+        - label: File types are selected from the dropdown menu
+          required: false
+        - label: Files only have 1 attribute per file, NB. Only 1 attribute will be added by upload tool, but all attributes can be included in spreadsheet to ease curation tracking, but they will be concatenated into a single attribute.
+          required: false
+        - label: Userbox have DOI.md5 and DOI.filesizes files present and correct
+          required: false
