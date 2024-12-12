@@ -1,5 +1,5 @@
-name: Bug Report
-description: File a bug report.
+name: Test-yml dataset Prep-tracking
+description: first attempt at using a yml format to create a issue template
 title: "[Include MS Submission ID, Dataset DOI number, userbox]"
 labels: ["datasetPrep"]
 projects: ["gigascience/87"]
