@@ -6,8 +6,7 @@ projects: ["gigascience/87"]
 body:
 - type: markdown
   attributes:
-    value: |
-    Fill out the form with the manuscript and dataset info!
+    value: "Please fill out this form with the manuscript and dataset information"
 - type: input
   id: dataset-doi
   attributes:
