@@ -126,3 +126,70 @@ body:
           required: false
         - label: Userbox have DOI.md5 and DOI.filesizes files present and correct
           required: false
+   - type: checkboxes
+     id: post-peer-review-steps
+     attributes:
+       label: Post peer-review steps
+       description: Below is the list of steps that are generally performed post peer-review to create the dataset for a manuscript. Tick each one as its completed
+       options:
+         - label: (10) MS is flagged as "prepare dataset" in EM or RVT
+           required: false
+         - label: (11) MS is added to the dataset tracker (i.e. this issue is created)
+           required: false
+         - label: (12) A curator is assigned (add you name as the assignee in the top right of this issue)
+           required: false
+         - label: (13) Check previous email communications in database mailbox (and add comments below in this issue)
+           required: false
+         - label: (14) Check notes in the pre-review checklist and DOI tracking sheet (and add relevant info below)
+           required: false
+         - label: (15) retrieve the pre-filled spreadsheet from mailbox (should already have been added above)
+           required: false
+         - label: (16) "Do Curation" - see curator guidelines for details
+           required: false
+         - label: (17) Create the DOI.md5 and DOI.filesizes using 'calculateChecksumSizes' script
+           required: false
+         - label: (18) Confirm the user dropbox content exactly matches the spreadsheet (use 'compare' script)
+           required: false
+         - label: (19) use the checklist above to confirm the contents of the spreadsheet before upload
+           required: false
+         - label: (20) Copy the spreadsheet to the "uploadDir" on the bastion server (using FileZilla or similar)
+           required: false
+         - label: (21) Run the 'datasetUpload' script to upload spreadsheet info to GigaDB
+           required: false
+         - label: (22) Check dataset in GigaDB looks correct
+           required: false
+         - label: (22b) create the mockup URL
+           required: false
+         - label: (22c) add curator name
+           required: false
+         - label: (22d) add thumbnail image
+           required: false
+         - label: (22e) add dataset size
+           required: false
+         - label: (22f) add publication date
+           required: false
+         - label: (22g) create a log entry for all previous comments in DOI sheet
+           required: false
+         - label: (23) Run the 'postUpload' script in the userbox on bastion to populate the files metadata in GigaDB
+           required: false
+         - label: (24) invite authors to check mockup page
+           required: false
+         - label: (24b) get curators 2nd eye check done
+           required: false
+         - label: (25) Make any required changes from 24 above
+           required: false
+         - label: (26) If required re-run the 'postUpload' script to correct the readme and files metadata
+           required: false
+         - label: (27) Run the 'transfer' script to copy data files to public Wasabi host
+           required: false
+         - label: (28) use the 'transfer' script to copy the data files to the s3-glacier backup storage
+           required: false
+         - label: (29) Mint the DOI
+           required: false
+         - label: (30) release the dataset
+           required: false
+         - label: (31) Inform the authors and editorial by email
+           required: false
+         - label: (32) close this ticket as completed
+           required: false
+   
