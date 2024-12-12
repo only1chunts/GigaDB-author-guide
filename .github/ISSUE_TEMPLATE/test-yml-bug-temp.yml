@@ -104,7 +104,7 @@ body:
       options:
         - label: Checked if user email address is already in GigaDB
           required: false
-        - label: Dataset type(s) are spelt correctly 
+        - label: Dataset types are spelt correctly 
           required: false
         - label: Author list format is as expected
           required: false
