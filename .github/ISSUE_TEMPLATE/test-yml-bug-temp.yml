@@ -4,192 +4,192 @@ title: "[Include MS Submission ID, Dataset DOI number, userbox]"
 labels: ["datasetPrep"]
 projects: ["gigascience/87"]
 body:
-  - type: markdown
-    attributes:
-      value: |
-        Fill out the form with the manuscript and dataset info!
-  - type: input
-    id: dataset-doi
-    attributes:
-      label: Dataset DOI
-      description: Add the next available dataset DOI number here
-      placeholder: eg. 123456
-    validations:
-      required: true
-  - type: input
-    id: ms-sub-id
-    attributes:
-      label: MS Submission ID
-      description: Add the manuscript submission ID here
-      placeholder: GIGA-D-25-00123
-    validations:
-      required: true
-  - type: dropdown
-    id: journal
-    attributes:
-      label: Which journal
-      description: Select the journal
-      options:
-        - GigaScience (Default)
-        - GigaByte
-        - other/unknown
-    validations:
-      required: true
-  - type: input
-    id: dataset-title
-    attributes:
-      label: Dataset title
-      description: Complete the expected dataset title. Note. Usually this is the manuscript title prefixed with Supporting data for.
-      placeholder: 
-      value: "Supporting data for "
-    validations:
-      required: true
-  - type: textarea
-    id: ms-author
-    attributes:
-      label: MS Author
-      description: Add the manuscript contact author(s) here, you can include name, email and orcid.
-      placeholder: 
-    validations:
-      required: false      
-  - type: dropdown
-    id: handling-editor
-    attributes:
-      label: Handling Editor
-      description: Select the name of the Handling editor
-      options:
-        - unknown (Default)
-        - Scott
-        - Nicole
-        - Hans
-        - Hongling
-        - Hongfang
-        - Qing
-    validations:
-      required: true
-  - type: input
-    id: dropbox-id
-    attributes:
-      label: user-dropbox details
-      description: Provide the user-dropbox name and login details, or enter 'no dropbox required'.
-      placeholder: eg. userNNN:abc123def or no dropbox required
-    validations:
-      required: true
-  - type: checkboxes
-    id: is-it-ready-to-start-checks
-    attributes:
-      label: Please check the boxes to confirm each of the following items have been checked prior to submitting this ticket
-      options:
-        - label: Add the handling curators name as the assignee (top-right)
-          required: true
-  - type: textarea
-    id: spreadsheet
-    attributes:
-      label: pre-filled Spreadsheet
-      description: Please upload the part-filled spreadsheet and the thumbnail image here. You can attach files by clicking this area to highlight it and then dragging files into it.
-    validations:  
-      required: true
-  - type: textarea
-    id: comments
-    attributes:
-      label: comments
-      description: You can add additional comments here
-      placeholder: ex. any additional infor provided by Eds at handover
-    validations:
-      required: false
-  - type: checkboxes
-    id: completed-spreadsheet-checklist
-    attributes:
-      label: After the spreadsheet has been completed, use this checklist to avoid issues when using the dataset upload scripts
-      options:
-        - label: Checked if user email address is already in GigaDB
-          required: false
-        - label: Dataset types are spelt correctly 
-          required: false
-        - label: Author list format is as expected
-          required: false
-        - label: Funding details are formated correctly with no additional commas or semi-colons
-          required: false
-        - label: Sample tab includes ONLY 1 header row (plus sample rows) 
-          required: false
-        - label: Sample attributes are from the controlled vocabulary present in GigaDB attributes table
-          required: false
-        - label: All filenames ONLY include the characters a-z A-Z 0-9 _ - + .  nothing else
-          required: false
-        - label: File list exactly matches the files in the relevant userbox, NB. readme_DOI.txt will be in files tab of spreadsheet but not in userbox, DOI.md5 and DOI.filesizes will appear in userbox but not in files tab of spreadsheet
-          required: false
-        - label: There are no hidden/system files included in userbox (nor spreadsheet), e.g `.DS_store` or similar.
-          required: false
-        - label: File types are selected from the dropdown menu
-          required: false
-        - label: Files only have 1 attribute per file, NB. Only 1 attribute will be added by upload tool, but all attributes can be included in spreadsheet to ease curation tracking, but they will be concatenated into a single attribute.
-          required: false
-        - label: Userbox have DOI.md5 and DOI.filesizes files present and correct
-          required: false
-   - type: checkboxes
-     id: post-peer-review-steps
-     attributes:
-       label: Post peer-review steps
-       description: Below is the list of steps that are generally performed post peer-review to create the dataset for a manuscript. Tick each one as its completed
-       options:
-         - label: (10) MS is flagged as "prepare dataset" in EM or RVT
-           required: false
-         - label: (11) MS is added to the dataset tracker (i.e. this issue is created)
-           required: false
-         - label: (12) A curator is assigned (add you name as the assignee in the top right of this issue)
-           required: false
-         - label: (13) Check previous email communications in database mailbox (and add comments below in this issue)
-           required: false
-         - label: (14) Check notes in the pre-review checklist and DOI tracking sheet (and add relevant info below)
-           required: false
-         - label: (15) retrieve the pre-filled spreadsheet from mailbox (should already have been added above)
-           required: false
-         - label: (16) "Do Curation" - see curator guidelines for details
-           required: false
-         - label: (17) Create the DOI.md5 and DOI.filesizes using 'calculateChecksumSizes' script
-           required: false
-         - label: (18) Confirm the user dropbox content exactly matches the spreadsheet (use 'compare' script)
-           required: false
-         - label: (19) use the checklist above to confirm the contents of the spreadsheet before upload
-           required: false
-         - label: (20) Copy the spreadsheet to the "uploadDir" on the bastion server (using FileZilla or similar)
-           required: false
-         - label: (21) Run the 'datasetUpload' script to upload spreadsheet info to GigaDB
-           required: false
-         - label: (22) Check dataset in GigaDB looks correct
-           required: false
-         - label: (22b) create the mockup URL
-           required: false
-         - label: (22c) add curator name
-           required: false
-         - label: (22d) add thumbnail image
-           required: false
-         - label: (22e) add dataset size
-           required: false
-         - label: (22f) add publication date
-           required: false
-         - label: (22g) create a log entry for all previous comments in DOI sheet
-           required: false
-         - label: (23) Run the 'postUpload' script in the userbox on bastion to populate the files metadata in GigaDB
-           required: false
-         - label: (24) invite authors to check mockup page
-           required: false
-         - label: (24b) get curators 2nd eye check done
-           required: false
-         - label: (25) Make any required changes from 24 above
-           required: false
-         - label: (26) If required re-run the 'postUpload' script to correct the readme and files metadata
-           required: false
-         - label: (27) Run the 'transfer' script to copy data files to public Wasabi host
-           required: false
-         - label: (28) use the 'transfer' script to copy the data files to the s3-glacier backup storage
-           required: false
-         - label: (29) Mint the DOI
-           required: false
-         - label: (30) release the dataset
-           required: false
-         - label: (31) Inform the authors and editorial by email
-           required: false
-         - label: (32) close this ticket as completed
-           required: false
-   
+- type: markdown
+  attributes:
+    value: |
+    Fill out the form with the manuscript and dataset info!
+- type: input
+  id: dataset-doi
+  attributes:
+    label: Dataset DOI
+    description: Add the next available dataset DOI number here
+    placeholder: eg. 123456
+  validations:
+    required: true
+- type: input
+  id: ms-sub-id
+  attributes:
+    label: MS Submission ID
+    description: Add the manuscript submission ID here
+    placeholder: GIGA-D-25-00123
+  validations:
+    required: true
+- type: dropdown
+  id: journal
+  attributes:
+    label: Which journal
+    description: Select the journal
+    options:
+      - GigaScience (Default)
+      - GigaByte
+      - other/unknown
+  validations:
+    required: true
+- type: input
+  id: dataset-title
+  attributes:
+    label: Dataset title
+    description: Complete the expected dataset title. Note. Usually this is the manuscript title prefixed with Supporting data for.
+    placeholder: 
+    value: "Supporting data for "
+  validations:
+    required: true
+- type: textarea
+  id: ms-author
+  attributes:
+    label: MS Author
+    description: Add the manuscript contact author(s) here, you can include name, email and orcid.
+    placeholder: 
+  validations:
+    required: false      
+- type: dropdown
+  id: handling-editor
+  attributes:
+    label: Handling Editor
+    description: Select the name of the Handling editor
+    options:
+      - unknown (Default)
+      - Scott
+      - Nicole
+      - Hans
+      - Hongling
+      - Hongfang
+      - Qing
+  validations:
+    required: true
+- type: input
+  id: dropbox-id
+  attributes:
+    label: user-dropbox details
+    description: Provide the user-dropbox name and login details, or enter 'no dropbox required'.
+    placeholder: eg. userNNN:abc123def or no dropbox required
+  validations:
+    required: true
+- type: checkboxes
+  id: is-it-ready-to-start-checks
+  attributes:
+    label: Please check the boxes to confirm each of the following items have been checked prior to submitting this ticket
+    options:
+      - label: Add the handling curators name as the assignee (top-right)
+        required: true
+- type: textarea
+  id: spreadsheet
+  attributes:
+    label: pre-filled Spreadsheet
+    description: Please upload the part-filled spreadsheet and the thumbnail image here. You can attach files by clicking this area to highlight it and then dragging files into it.
+  validations:  
+    required: true
+- type: textarea
+  id: comments
+  attributes:
+    label: comments
+    description: You can add additional comments here
+    placeholder: ex. any additional infor provided by Eds at handover
+  validations:
+    required: false
+- type: checkboxes
+  id: completed-spreadsheet-checklist
+  attributes:
+    label: After the spreadsheet has been completed, use this checklist to avoid issues when using the dataset upload scripts
+    options:
+      - label: Checked if user email address is already in GigaDB
+        required: false
+      - label: Dataset types are spelt correctly 
+        required: false
+      - label: Author list format is as expected
+        required: false
+      - label: Funding details are formated correctly with no additional commas or semi-colons
+        required: false
+      - label: Sample tab includes ONLY 1 header row (plus sample rows) 
+        required: false
+      - label: Sample attributes are from the controlled vocabulary present in GigaDB attributes table
+        required: false
+      - label: All filenames ONLY include the characters a-z A-Z 0-9 _ - + .  nothing else
+        required: false
+      - label: File list exactly matches the files in the relevant userbox, NB. readme_DOI.txt will be in files tab of spreadsheet but not in userbox, DOI.md5 and DOI.filesizes will appear in userbox but not in files tab of spreadsheet
+        required: false
+      - label: There are no hidden/system files included in userbox (nor spreadsheet), e.g `.DS_store` or similar.
+        required: false
+      - label: File types are selected from the dropdown menu
+        required: false
+      - label: Files only have 1 attribute per file, NB. Only 1 attribute will be added by upload tool, but all attributes can be included in spreadsheet to ease curation tracking, but they will be concatenated into a single attribute.
+        required: false
+      - label: Userbox have DOI.md5 and DOI.filesizes files present and correct
+        required: false
+- type: checkboxes
+  id: post-peer-review-steps
+  attributes:
+    label: Post peer-review steps
+    description: Below is the list of steps that are generally performed post peer-review to create the dataset for a manuscript. Tick each one as its completed
+    options:
+      - label: (10) MS is flagged as "prepare dataset" in EM or RVT
+        required: false
+      - label: (11) MS is added to the dataset tracker (i.e. this issue is created)
+        required: false
+      - label: (12) A curator is assigned (add you name as the assignee in the top right of this issue)
+        required: false
+      - label: (13) Check previous email communications in database mailbox (and add comments below in this issue)
+        required: false
+      - label: (14) Check notes in the pre-review checklist and DOI tracking sheet (and add relevant info below)
+        required: false
+      - label: (15) retrieve the pre-filled spreadsheet from mailbox (should already have been added above)
+        required: false
+      - label: (16) "Do Curation" - see curator guidelines for details
+        required: false
+      - label: (17) Create the DOI.md5 and DOI.filesizes using 'calculateChecksumSizes' script
+        required: false
+      - label: (18) Confirm the user dropbox content exactly matches the spreadsheet (use 'compare' script)
+        required: false
+      - label: (19) use the checklist above to confirm the contents of the spreadsheet before upload
+        required: false
+      - label: (20) Copy the spreadsheet to the "uploadDir" on the bastion server (using FileZilla or similar)
+        required: false
+      - label: (21) Run the 'datasetUpload' script to upload spreadsheet info to GigaDB
+        required: false
+      - label: (22) Check dataset in GigaDB looks correct
+        required: false
+      - label: (22b) create the mockup URL
+        required: false
+      - label: (22c) add curator name
+        required: false
+      - label: (22d) add thumbnail image
+        required: false
+      - label: (22e) add dataset size
+        required: false
+      - label: (22f) add publication date
+        required: false
+      - label: (22g) create a log entry for all previous comments in DOI sheet
+        required: false
+      - label: (23) Run the 'postUpload' script in the userbox on bastion to populate the files metadata in GigaDB
+        required: false
+      - label: (24) invite authors to check mockup page
+        required: false
+      - label: (24b) get curators 2nd eye check done
+        required: false
+      - label: (25) Make any required changes from 24 above
+        required: false
+      - label: (26) If required re-run the 'postUpload' script to correct the readme and files metadata
+        required: false
+      - label: (27) Run the 'transfer' script to copy data files to public Wasabi host
+        required: false
+      - label: (28) use the 'transfer' script to copy the data files to the s3-glacier backup storage
+        required: false
+      - label: (29) Mint the DOI
+        required: false
+      - label: (30) release the dataset
+        required: false
+      - label: (31) Inform the authors and editorial by email
+        required: false
+      - label: (32) close this ticket as completed
+        required: false
+
