@@ -35,5 +35,9 @@ SSoftware with persistent identifier (Software Heritage)
 Fang S, Cao L, Yang C, Hu L et al. (2023) SGAE: Deciphering spatial domains from spatially resolved transcriptomics with Siamese Graph Autoencoder (Version 1). [Computer software]. Software Heritage, https://archive.softwareheritage.org/swh:1:snp:19c3ac3c492b5b4c6aca5451eeea9efb52a3ad9d;origin=https://github.com/STOmics/SGAE
 
 
-Additionally, they offer a Widget iframe view, which we should be able to include in GigaDB or in GigaByte. 
+Additionally, they offer a Widget iframe view (example below), which we should be able to include in GigaDB or in GigaByte. 
+
+<iframe style="width: 100%; height: 500px; border: 1px solid rgba(0, 0, 0, 0.125);"
+        src="https://archive.softwareheritage.org/browse/embed/swh:1:dir:e894fed8e927eec1eda9080f9db475b8b4c68dd7;origin=https://github.com/gigascience/gigadb-website;visit=swh:1:snp:dcf6d006361fca8e099de2ab7f5c9d5033d867af;anchor=swh:1:rev:cc89605c6bd7fc208d8221c76fa21932b6578291/">
+</iframe>
 
