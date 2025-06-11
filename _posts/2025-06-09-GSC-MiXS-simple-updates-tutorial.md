@@ -41,25 +41,27 @@ You will require a valid [GitHub account](https://github.com/signup) to perform 
 Ticket [#701](https://github.com/GenomicsStandardsConsortium/mixs/issues/701) was provided by a user, it included a bunch of typo's in various term descriptions. We will use this as an example use case for making simple updates.
 
 The ticket 701 combines a number of different tasks, so the first thing we need to do is split out a single task to work on. 
-See screenshot:(create-sub-issue.jpg)
+See screenshot:![Step1](../assets/img/GSC-update-mixs-steps/create-sub-issue.jpg)
 
 Create the subissue as shown above.
-Note the line item disappears from view and gets inserted further down the ticket so scroll down to find the newly created sub-issue: (create-sub-issue2.jpg)
+Note the line item disappears from view and gets inserted further down the ticket so scroll down to find the newly created sub-issue: ![Step2](../assets/img/GSC-update-mixs-steps/create-sub-issue2.jpg)
 
-Then we need to edit the sub-issue description to include all the details of exactly what needs to be changed: create-sub-issue3.jpg
+Then we need to edit the sub-issue description to include all the details of exactly what needs to be changed: ![Step3](../assets/img/GSC-update-mixs-steps/create-sub-issue3.jpg)
 
-As a guide the ticket should include the specific term ID and the exact changes that have been proposed and approved by the CIG. Also note that the sub-issue has automatically had the Parent ticket linked in the relationship field on the right of the screen: (create-sub-issue4.jpg)
+As a guide the ticket should include the specific term ID and the exact changes that have been proposed and approved by the CIG. Also note that the sub-issue has automatically had the Parent ticket linked in the relationship field on the right of the screen: ![Step4](../assets/img/GSC-update-mixs-steps/create-sub-issue4.jpg)
 
 Make a mental note of the sub-issue ticket number, in this example its #981
-Navigate to the source of truth mixs.yaml file where the update needs to be made: (navigate-to-mixs.yaml.jpg)
-Next we need to edit the mixs.yaml file, to do this you may need to be a member of the GSC GitHub group, if you do not see the icon as shown please contact the GSC to request to be added to the GitHub group: (edit-mixs.yaml1.jpg)
+Navigate to the source of truth mixs.yaml file where the update needs to be made: ![Step5](../assets/img/GSC-update-mixs-steps/navigate-to-mixs.yaml.jpg)
+Next we need to edit the mixs.yaml file, to do this you may need to be a member of the GSC GitHub group, if you do not see the icon as shown please contact the GSC to request to be added to the GitHub group: ![Step6](../assets/img/GSC-update-mixs-steps/edit-mixs.yaml1.jpg)
 
 Use the "Find" function (in Windows thats "Ctrl+F") to search the document to find the typographic error that we're updating. In this case its the word "oxgen", and it only appears once in the document. Be particularly careful to make sure that you find the exact place in the document that is approved for update in the ticket you are working on. 
 If you discover additional issues it is safest to make a note of those and create separate tickets for additional future updates so that they can be examined and approved by the CIG before being made.
-ONLY proceed with the update that is approved in the ticket you are working towards: (edit-mixs.yaml2.jpg)
+ONLY proceed with the update that is approved in the ticket you are working towards: ![Step7](../assets/img/GSC-update-mixs-steps/edit-mixs.yaml2.jpg)
 
 After you have made the relevant update to the file, click the "Commit changes" button
+![Step8](../assets/img/GSC-update-mixs-steps/edit-mixs.yaml3.jpg)
+![Step9](../assets/img/GSC-update-mixs-steps/edit-mixs.yaml4.jpg)
 
-In the pop-up dialog box called "Proposed changes" you need to fill in the details of what the commit is about, this should include the issue number being fixed and the description of what the fix is: (create-pull-request1.jpg)
+In the pop-up dialog box called "Proposed changes" you need to fill in the details of what the commit is about, this should include the issue number being fixed and the description of what the fix is: ![Step10](../assets/img/GSC-update-mixs-steps/create-pull-request1.jpg)
 
-(create-pull-request2.jpg)
+![Step11](../assets/img/GSC-update-mixs-steps/create-pull-request2.jpg)
