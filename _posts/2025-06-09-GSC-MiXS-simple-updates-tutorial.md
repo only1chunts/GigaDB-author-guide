@@ -64,4 +64,12 @@ After you have made the relevant update to the file, click the "Commit changes" 
 
 In the pop-up dialog box called "Proposed changes" you need to fill in the details of what the commit is about, this should include the issue number being fixed and the description of what the fix is: ![Step10](../assets/img/GSC-update-mixs-steps/create-pull-request1.jpg)
 
+Once you click the "Create pull request" button, a set of automated GitHub workflows are initiated, these checks can take a while to complete (upto 1 hour), you can still invite reviewers during that time:
 ![Step11](../assets/img/GSC-update-mixs-steps/create-pull-request2.jpg)
+
+All Pull requests require at least 1 positive review to be able to merge them into the main branch of the repository.
+We recomend only inviting reviewers that know to expect to be invited and are prepared to undertake the review, i.e. someone you have contacted to ask if they can do it.
+
+A competent reviewer will then complete the review, if changes are required they will use the "request change" or "comments" options within the review process to inform you that you need make changes, keep an eye on your email notifications about those.
+
+Once approved it can be merged, either by the reviewer or by the requestor (if they have appropriate priveledges).
